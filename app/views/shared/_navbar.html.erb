@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Search a movie", "#", class: "nav-link" %>
+          <%= link_to "Search a movie", movies_path , class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "My lists", lists_path , class: "nav-link" %>
