@@ -1,5 +1,22 @@
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= movie.title %></li>
-  <% end %>
-</ul>
+
+
+
+<div class="container my-3">
+
+  <div class="row justify-content-center">
+
+    <% @movies.each do |movie| %>
+      <div class="col-4">
+        <div class="movie-card">
+          <%= image_tag movie.poster_url %>
+          <div class="movie-card-infos">
+            <p><%= link_to movie.title, movie_path(movie) %></p>
+            <p>⭐<%= movie.rating %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
